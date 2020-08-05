@@ -5,7 +5,7 @@ import ClassSchedule from '../entities/ClassSchedule';
 import hoursToMinute from '../utils/hoursToMinute';
 
 interface RequestSchedule {
-  weekDay: number;
+  week_day: number;
   from: string;
   to: string;
 }
@@ -40,7 +40,7 @@ class CreateClassService {
     const classSchedules = schedule.map(scheduleItem => {
       return {
         classId,
-        weekDay: scheduleItem.weekDay,
+        weekDay: scheduleItem.week_day,
         from: hoursToMinute(scheduleItem.from),
         to: hoursToMinute(scheduleItem.to),
       };
