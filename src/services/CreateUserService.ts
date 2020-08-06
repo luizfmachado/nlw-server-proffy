@@ -15,7 +15,7 @@ class CreateClassService {
     avatar,
     whatsapp,
     bio,
-  }: Request): Promise<User> {
+  }: Request): Promise<User | undefined> {
     const usersRepository = getRepository(User);
 
     const user = usersRepository.create({

@@ -24,7 +24,7 @@ class ClassSchedule {
 
   @ManyToOne(() => Class, classes => classes.schedules)
   @JoinColumn({ name: 'classId' })
-  classId: Class;
+  classId: string;
 }
 
 export default ClassSchedule;

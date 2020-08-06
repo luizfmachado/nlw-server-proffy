@@ -28,9 +28,9 @@ class CreateClassService {
     const classScheduleRepository = getRepository(ClassSchedule);
 
     const classes = classesRepository.create({
+      userId,
       subject,
       cost,
-      userId,
     });
 
     await classesRepository.save(classes);

@@ -23,7 +23,7 @@ class Class {
 
   @OneToOne(() => User)
   @JoinColumn({ name: 'userId' })
-  userId: User;
+  userId: string;
 
   @OneToMany(() => ClassSchedule, schedules => schedules.classId)
   schedules: ClassSchedule[];

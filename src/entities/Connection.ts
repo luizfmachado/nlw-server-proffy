@@ -15,7 +15,7 @@ class Connection {
 
   @ManyToOne(() => User)
   @JoinColumn({ name: 'userId' })
-  userId: User;
+  userId: string;
 
   @CreateDateColumn()
   createdAt: Date;

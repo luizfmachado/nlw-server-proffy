@@ -52,6 +52,10 @@ classesRouter.post('/classes', async (request, response) => {
     bio,
   });
 
+  if (!user) {
+    return response.status(400).json({ error: 'Unexpected error on save.' });
+  }
+
   await createClass.execute({
     subject,
     cost,
